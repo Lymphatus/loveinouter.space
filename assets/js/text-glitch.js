@@ -1,13 +1,15 @@
 var glitchLength = 100;
 var glitches = 25;
+var glitchCompleted = false;
 
 const CHARS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', '-', '#', '@', '+', '_', '(', ')', '[', ']'];
 
 function glitch() {
 	var j = 0;
+	$('#loading-progress').fadeIn(500);
 	$('.glitch-text').each(function () {
 		var $selector = $(this);
-		var text = $selector.text();
+		var text = $selector.attr('data-text');
 		var textLength = text.length;
 		var count = 0;
 		var doNotChange = [];
@@ -17,7 +19,6 @@ function glitch() {
 			}, function () {
 				$selector.removeClass('glitch');
 			})
-
 		}, Math.ceil(Math.random() * 600) / 2);
 
 		setTimeout(function () {
@@ -41,6 +42,16 @@ function glitch() {
 		}, j * glitchLength * glitches + 100);
 		j++;
 	});
+	setTimeout(function () {
+		onGlitchFinish();
+	}, (2 * glitchLength * glitches) + 100);
+}
+
+function onGlitchFinish() {
+	glitchCompleted = true;
+	if (loadingCompleted) {
+		introFinished();
+	}
 }
 
 function setIntervalX(callback, delay, repetitions, onFinish) {

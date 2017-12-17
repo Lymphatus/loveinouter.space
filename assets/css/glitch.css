@@ -45,14 +45,8 @@
 
 @keyframes noise {
   0%, 3%, 5%, 42%, 44%, 79%, 81%, 90%, 92%, 100% {opacity: 1; transform: scaleY(1);}
-  4.3% {opacity: 1; transform: scaleY(1.7);}
-  43% {opacity: 1; transform: scaleX(1.5);}
-  80% {opacity: 0.8; transform: scaleX(1.2);}
-  91% {opacity: 1; transform: scaleX(1.2);}
-}
-
-@keyframes noise-3 {
-  0%,3%,5%,42%,44%,100% {opacity: 1; transform: scaleY(1);}
-  4.3% {opacity: 1; transform: scaleY(4);}
-  43% {opacity: 1; transform: scaleX(10) rotate(60deg);}
+  4.3% {opacity: 1; transform: scaleY(1.4);}
+  43% {opacity: 1; transform: scaleX(1.2);}
+  80% {opacity: 0.8; transform: scaleX(1.1);}
+  91% {opacity: 1; transform: scaleX(1.1);}
 }

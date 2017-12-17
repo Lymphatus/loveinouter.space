@@ -25,7 +25,7 @@ function glitch() {
 			setIntervalX(function () {
 				var newText = '';
 				for (var i = 0; i < textLength; i++) {
-					if (Math.random() < 0.85 && doNotChange.indexOf(i) === -1) {
+					if (Math.random() < 0.875 && doNotChange.indexOf(i) === -1) {
 						newText = newText + CHARS[Math.floor((Math.random() * CHARS.length))];
 					} else {
 						newText = newText + text[i];

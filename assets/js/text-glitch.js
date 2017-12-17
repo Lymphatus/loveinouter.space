@@ -1,6 +1,6 @@
 var glitchLength = 100;
 var glitches = 25;
-var glitchCompleted = false;
+var glitchCompleted = true;
 
 const CHARS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', '-', '#', '@', '+', '_', '(', ')', '[', ']'];
 
@@ -44,7 +44,7 @@ function glitch() {
 	});
 	setTimeout(function () {
 		onGlitchFinish();
-	}, (2 * glitchLength * glitches) + 100);
+	}, 5500);
 }
 
 function onGlitchFinish() {

@@ -5,14 +5,11 @@
 	<meta charset="UTF-8">
 	<title>LoveInOuter.Space</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="assets/css/vendor/kube.min.css" rel="stylesheet"
-		  type="text/css">
-	<link rel="stylesheet"
-		  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
+	<link href="assets/css/vendor/kube.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/glitch.css" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Jura:300,500,700"
-		  rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Jura:300,500,700" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +22,8 @@
 		<h1 class="glitch-text" data-text="I’ll be right there by your side">&nbsp;</h1></div>
 </div>
 <div class="row">
-	<div class="container" id="3-container"></div>
+	<div class="container" id="3-container">
+	</div>
 	<div class="col col-4 me push-middle">
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non est
 		consequat, lobortis mauris scelerisque, facilisis nisi. Vestibulum sed
@@ -43,7 +41,28 @@
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous"></script>
 <script src="assets/js/vendor/three.min.js"></script>
-<script src="assets/js/vendor/GPUParticleSystem.js"></script>
+
+<script src="assets/js/vendor/shaders/BleachBypassShader.js"></script>
+<script src="assets/js/vendor/shaders/ColorifyShader.js"></script>
+<script src="assets/js/vendor/shaders/ConvolutionShader.js"></script>
+<script src="assets/js/vendor/shaders/CopyShader.js"></script>
+<script src="assets/js/vendor/shaders/DotScreenShader.js"></script>
+<script src="assets/js/vendor/shaders/FilmShader.js"></script>
+<script src="assets/js/vendor/shaders/HorizontalBlurShader.js"></script>
+<script src="assets/js/vendor/shaders/SepiaShader.js"></script>
+<script src="assets/js/vendor/shaders/VerticalBlurShader.js"></script>
+<script src="assets/js/vendor/shaders/VignetteShader.js"></script>
+
+<script src="assets/js/vendor/postprocessing/EffectComposer.js"></script>
+<script src="assets/js/vendor/postprocessing/RenderPass.js"></script>
+<script src="assets/js/vendor/postprocessing/BloomPass.js"></script>
+<script src="assets/js/vendor/postprocessing/FilmPass.js"></script>
+<script src="assets/js/vendor/postprocessing/DotScreenPass.js"></script>
+<script src="assets/js/vendor/postprocessing/TexturePass.js"></script>
+<script src="assets/js/vendor/postprocessing/ShaderPass.js"></script>
+<script src="assets/js/vendor/postprocessing/MaskPass.js"></script>
+
+<!--<script src="assets/js/vendor/GPUParticleSystem.js"></script>-->
 <script src="assets/js/vendor/TrackballControls.js"></script>
 <script src="assets/js/vendor/kube.min.js"></script>
 <script src="assets/js/main.js"></script>

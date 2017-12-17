@@ -44,9 +44,9 @@ function init() {
 	var path = "assets/images/skybox/";
 	var format = '.png';
 	var urls = [
-		path + 'posx' + format, path + 'negx' + format,
-		path + 'posy' + format, path + 'negy' + format,
-		path + 'posz' + format, path + 'negz' + format
+		path + 'px' + format, path + 'nx' + format,
+		path + 'py' + format, path + 'ny' + format,
+		path + 'pz' + format, path + 'nz' + format
 	];
 	var reflectionCube = new THREE.CubeTextureLoader(manager).load(urls);
 	reflectionCube.format = THREE.RGBFormat;
@@ -83,11 +83,11 @@ function init() {
 	renderer.setSize(window.innerWidth, window.innerHeight);
 	container.appendChild(renderer.domElement);
 
-	// controls = new THREE.TrackballControls(camera, renderer.domElement);
-	// controls.rotateSpeed = 5.0;
-	// controls.zoomSpeed = 2.2;
-	// controls.panSpeed = 1;
-	// controls.dynamicDampingFactor = 0.3;
+	controls = new THREE.TrackballControls(camera, renderer.domElement);
+	controls.rotateSpeed = 5.0;
+	controls.zoomSpeed = 2.2;
+	controls.panSpeed = 1;
+	controls.dynamicDampingFactor = 0.3;
 
 	window.addEventListener('resize', onWindowResize, false);
 

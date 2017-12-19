@@ -1,5 +1,25 @@
-body {
+body, html {
   font-family: 'Space Mono', monospace;
-  background: url("../images/background.png"); }
+  background: #fdfbef;
+  color: #524f41;
+  width: 100%;
+  height: 100%; }
+  body .container, html .container {
+    width: 100%;
+    height: 100%; }
+  body .init-text, html .init-text {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    animation-duration: 2s; }
+  body .typed-cursor, html .typed-cursor {
+    animation-duration: 2s; }
+  body #loading-progress, html #loading-progress {
+    height: 2px;
+    background: #524f41;
+    margin: 10px 0 10px 0;
+    width: 0;
+    transition: 2s; }
 
 /*# sourceMappingURL=main.css.map */

@@ -36,7 +36,7 @@ body, html {
     background: #524f41;
     margin: 10px 0 10px 0;
     width: 0;
-    transition: 20s linear; }
+    transition: 24s linear; }
   body .dud, html .dud {
     color: rgba(82, 79, 65, 0.69); }
   body .audio-bars, html .audio-bars {

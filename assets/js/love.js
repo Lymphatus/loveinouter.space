@@ -5,7 +5,9 @@ function playIntro() {
         'System booting',
         'Initializing audio channels',
         'Generating visual effects',
-        'Entering queue'
+        'Connecting to neural network',
+        'Decrypting thoughts',
+        '[CRITICAL FAILURE]'
     ];
 
     var el = document.querySelector('#init-text');
@@ -16,7 +18,6 @@ function playIntro() {
     $('#loading-progress').css('width', '100%');
     var next = function next() {
         if (loops === 1) {
-            playError();
             return false;
         }
         fx.setText(phrases[counter]).then(function () {
@@ -28,6 +29,8 @@ function playIntro() {
             case 1:
                 audioController.play();
                 break;
+            case 5:
+                playError();
         }
         counter = (counter + 1) % phrases.length;
         if (counter === 0) {
@@ -38,7 +41,8 @@ function playIntro() {
 }
 
 function playError() {
-
+    $('#init-text').css('color', '#ff7c5e').addClass('animated infinite flash');
+    $('#loading-progress').css('transition', '1s linear').css('width', '0px');
 }
 
 var audioController = {

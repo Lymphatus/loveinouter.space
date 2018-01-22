@@ -1,88 +1,33 @@
-html, body {
-    margin: 0;
+body, html {
+  font-family: 'Space Mono', monospace;
+  background: #fdfbef;
+  color: #524f41;
+  width: 100%;
+  height: 100%; }
+  body .container, html .container {
     width: 100%;
-    height: 100%;
-    background: #000000;
-    color: #FFFFFF;
-    text-align: center;
-    font-family: 'Jura', sans-serif;
-    text-transform: uppercase;
-}
-
-#loading-progress {
-    height: 1px;
-    background: #FFFFFF;
+    height: 100%; }
+  body .init-text, html .init-text {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    animation-duration: 2s; }
+  body .typed-cursor, html .typed-cursor {
+    animation-duration: 2s; }
+  body .overlay, html .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("../images/pattern.png");
+    opacity: 0.03; }
+  body #loading-progress, html #loading-progress {
+    height: 2px;
+    background: #524f41;
     margin: 10px 0 10px 0;
     width: 0;
-}
+    transition: 2s; }
+  body .dud, html .dud {
+    color: rgba(82, 79, 65, 0.69); }
 
-.hr-bold {
-    height: 4px;
-}
-
-h1 {
-    font-family: 'Jura', sans-serif;
-    color: #FFFFFF;
-    font-size: 1.1em;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 0;
-    line-height: inherit;
-}
-
-h5 {
-    font-family: 'Jura', sans-serif;
-    color: #FFFFFF;
-    font-size: 0.9em;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin: 0;
-    line-height: inherit;
-}
-
-canvas {
-    width: 100%;
-    height: 100%;
-}
-
-.container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-}
-
-#loader {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background: black;
-}
-
-#loading-progress {
-    /*-webkit-transition: width 1s; !* Safari *!*/
-    /*transition: width 1s;*/
-}
-
-.row {
-    height: 100%;
-}
-
-.glitch-text {
-    visibility: hidden;
-}
-
-.me {
-    padding: 20px 20px 20px 40px;
-    z-index: 1;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: auto;
-    width: 100%;
-    padding: 10px;
-}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,49 @@
+$cream: #fdfbef;
+$text-primary: #524f41;
+$text-scramble: rgba(82, 79, 65, 0.69);
+
+body, html {
+  font-family: 'Space Mono', monospace;
+  background: $cream;
+  color: $text-primary;
+
+  width: 100%;
+  height: 100%;
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .init-text {
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.2em;
+    font-weight: bold;
+    animation-duration: 2s;
+  }
+  .typed-cursor {
+    animation-duration: 2s;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../images/pattern.png');
+    opacity: 0.03;
+  }
+
+  #loading-progress {
+    height: 2px;
+    background: $text-primary;
+    margin: 10px 0 10px 0;
+    width: 0;
+    transition: 2s;
+  }
+  .dud {
+    color: $text-scramble;
+  }
+}
+
+

@@ -7,6 +7,11 @@ body, html {
   body .container, html .container {
     width: 100%;
     height: 100%; }
+  body .footer, html .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px; }
   body .init-text, html .init-text {
     font-family: inherit;
     color: inherit;
@@ -20,14 +25,54 @@ body, html {
     top: 0;
     left: 0;
     background-image: url("../images/pattern.png");
-    opacity: 0.03; }
+    opacity: 0.00;
+    pointer-events: none;
+    animation-duration: 2s;
+    animation-name: background-glitch;
+    animation-delay: 10s;
+    animation-fill-mode: forwards; }
   body #loading-progress, html #loading-progress {
     height: 2px;
     background: #524f41;
     margin: 10px 0 10px 0;
     width: 0;
-    transition: 2s; }
+    transition: 20s linear; }
   body .dud, html .dud {
     color: rgba(82, 79, 65, 0.69); }
+  body .audio-bars, html .audio-bars {
+    transform: scaleY(-1);
+    height: 30px;
+    cursor: pointer; }
+    body .audio-bars .audio-bar, html .audio-bars .audio-bar {
+      width: 2px;
+      height: 1px;
+      min-height: 1px;
+      background-color: #524f41;
+      margin: 0 1px 0 1px;
+      transition: 0.1s; }
+
+@keyframes background-glitch {
+  0% {
+    opacity: 0.2; }
+  10% {
+    opacity: 0.5; }
+  20% {
+    opacity: 0.25; }
+  30% {
+    opacity: 0.7; }
+  40% {
+    opacity: 0.1; }
+  50% {
+    opacity: 0.9; }
+  60% {
+    opacity: 0.3; }
+  70% {
+    opacity: 0.7; }
+  80% {
+    opacity: 0; }
+  90% {
+    opacity: 0.1; }
+  100% {
+    opacity: 0.03; } }
 
 /*# sourceMappingURL=main.css.map */

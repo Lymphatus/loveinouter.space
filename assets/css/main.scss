@@ -15,6 +15,13 @@ body, html {
     height: 100%;
   }
 
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+  }
+
   .init-text {
     font-family: inherit;
     color: inherit;
@@ -31,7 +38,12 @@ body, html {
     top: 0;
     left: 0;
     background-image: url('../images/pattern.png');
-    opacity: 0.03;
+    opacity: 0.00;
+    pointer-events: none;
+    animation-duration: 2s;
+    animation-name: background-glitch;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
   }
 
   #loading-progress {
@@ -39,11 +51,39 @@ body, html {
     background: $text-primary;
     margin: 10px 0 10px 0;
     width: 0;
-    transition: 2s;
+    transition: 20s linear;
   }
   .dud {
     color: $text-scramble;
   }
+
+  .audio-bars {
+    transform: scaleY(-1);
+    height: 30px;
+    cursor: pointer;
+    .audio-bar {
+      width: 2px;
+      height: 1px;
+      min-height: 1px;
+      background-color: $text-primary;
+      margin: 0 1px 0 1px;
+      transition: 0.1s;
+    }
+  }
+}
+
+@keyframes background-glitch {
+  0%   {opacity: 0.2;}
+  10%  {opacity: 0.5;}
+  20%  {opacity: 0.25;}
+  30%  {opacity: 0.7;}
+  40%  {opacity: 0.1;}
+  50%  {opacity: 0.9;}
+  60%  {opacity: 0.3;}
+  70%  {opacity: 0.7;}
+  80%  {opacity: 0;}
+  90%  {opacity: 0.1;}
+  100% {opacity: 0.03;}
 }
 
 

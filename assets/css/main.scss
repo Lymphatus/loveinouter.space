@@ -1,5 +1,6 @@
 $cream: #fdfbef;
 $text-primary: #524f41;
+$text-scramble: rgba(82, 79, 65, 0.69);
 
 body, html {
   font-family: 'Space Mono', monospace;
@@ -25,6 +26,14 @@ body, html {
     animation-duration: 2s;
   }
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url('../images/pattern.png');
+    opacity: 0.03;
+  }
+
   #loading-progress {
     height: 2px;
     background: $text-primary;
@@ -32,6 +41,11 @@ body, html {
     width: 0;
     transition: 2s;
   }
+  .dud {
+    color: $text-scramble;
+  }
 }
+
+
 
 

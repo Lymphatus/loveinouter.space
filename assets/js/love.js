@@ -29,6 +29,9 @@ function playIntro() {
             case 1:
                 audioController.play();
                 break;
+            case 3:
+                spawnParticles();
+                break;
             case 5:
                 playError();
         }
@@ -81,4 +84,10 @@ var audioController = {
 
 function playAudio() {
 
+}
+
+function spawnParticles() {
+    particlesJS.load('particles', 'assets/json/particles.json', function() {
+        console.log('Connections loaded');
+    });
 }

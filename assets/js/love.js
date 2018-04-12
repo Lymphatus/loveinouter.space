@@ -15,11 +15,16 @@ function playIntro() {
 
     var counter = 0;
     var loops = 0;
-    $('#loading-progress').css('width', '100%');
     var next = function next() {
         if (loops === 1) {
             return false;
         }
+        setTimeout(function () {
+            // $('#loading-progress').css('width', '100%');
+            setTimeout(function () {
+                // $('#loading-progress').css('width', '0');
+            }, 1000);
+        }, 2000);
         fx.setText(phrases[counter]).then(function () {
             setTimeout(next, 2000);
         });
@@ -27,13 +32,24 @@ function playIntro() {
             case 0:
                 break;
             case 1:
-                audioController.play();
+                setTimeout(function () {
+                    audioController.play();
+                }, 2000);
+                break;
+            case 2:
+                setTimeout(function () {
+                    $('.overlay').addClass('animated');
+                }, 2000);
                 break;
             case 3:
-                spawnParticles();
+                setTimeout(function () {
+                    spawnParticles();
+                }, 2000);
                 break;
             case 5:
-                playError();
+                setTimeout(function () {
+                    playError();
+                }, 2000);
         }
         counter = (counter + 1) % phrases.length;
         if (counter === 0) {
@@ -45,7 +61,7 @@ function playIntro() {
 
 function playError() {
     $('#init-text').css('color', '#ff7c5e').addClass('animated infinite flash');
-    $('#loading-progress').css('transition', '1s linear').css('width', '0px');
+    // $('#loading-progress').css('transition', '1s linear').css('width', '0px');
 }
 
 var audioController = {
@@ -69,6 +85,7 @@ var audioController = {
                 $(this).css('height', Math.max(frequencyData[$(this).index()] * 20 / 255), 1);
             });
         }
+
         audioController.audioElem.volume = 0.2;
         audioController.audioElem.play();
         renderFrame();
@@ -87,7 +104,11 @@ function playAudio() {
 }
 
 function spawnParticles() {
-    particlesJS.load('particles', 'assets/json/particles.json', function() {
+    particlesJS.load('particles', 'assets/json/particles.json', function () {
         console.log('Connections loaded');
     });
+}
+
+function showInfo(caller) {
+    $('#info-container').html('').html($('#info-' + $(caller).html().toLowerCase()).html());
 }

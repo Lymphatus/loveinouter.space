@@ -27,12 +27,16 @@
     <div id="particles"></div>
     <div class="overlay"></div>
     <div class="row container align-center">
-		<div class="col col-6 push-center push-middle text-center">
+        <div class="col col-3 info-container" id="info-container">
+            Lorem ipsum dolor sit amet
+        </div>
+		<div class="col col-6 push-middle text-center">
 			<span class="init-text glitch" id="init-text"></span>
 			<div class="row align-center">
 				<div class="push-center col-12" id="loading-progress"></div>
 			</div>
 		</div>
+        <div class="col col-3"></div>
     </div>
     <div class="row footer">
         <div class="row audio-bars col-2" onclick="audioController.toggle();">
@@ -55,11 +59,13 @@
         </div>
         <div class="col-8"></div>
         <div class="col-2 push-right text-right push-bottom credits">
-            <span id="credits-who">Who</span><span id="credits-why">Why</span><span id="credits-how">How</span>
+            <span id="credits-who" onclick="showInfo(this);">Who</span>
+            <span id="credits-why" onclick="showInfo(this);">Why</span>
+            <span id="credits-how" onclick="showInfo(this);">How</span>
         </div>
     </div>
 
-	<audio id="background-audio" loop>
+	<audio id="background-audio" loop>loading-progress
 		<source src="assets/audio/ba.mp3" type="audio/mpeg">
 	</audio>
 
@@ -72,6 +78,12 @@
 	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.6/typed.min.js"></script>-->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/love.js"></script>
+
+    <div id="info-who hidden">
+        Matteo Paonessa
+        <br />
+        a Milan based developer
+    </div>
 </body>
 
 </html>

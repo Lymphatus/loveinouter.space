@@ -1,9 +1,14 @@
+@font-face {
+  font-family: Rodin;
+  src: url(../fonts/Rodin_DB.otf); }
 body, html {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Rodin', monospace;
   background: #fafaef;
   color: #524f41;
   width: 100%;
   height: 100%; }
+  body .hidden, html .hidden {
+    display: none; }
   body .container, html .container {
     width: 100%;
     height: 100%; }
@@ -14,7 +19,7 @@ body, html {
     padding: 5px;
     width: 100%;
     text-transform: uppercase;
-    font-size: 0.8em; }
+    font-size: 0.7em; }
     body .footer .credits, html .footer .credits {
       padding-right: 10px; }
       body .footer .credits span, html .footer .credits span {
@@ -24,7 +29,7 @@ body, html {
   body .init-text, html .init-text {
     font-family: inherit;
     color: inherit;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     animation-duration: 2s; }
   body .typed-cursor, html .typed-cursor {
@@ -35,11 +40,14 @@ body, html {
     left: 0;
     background-image: url("../images/pattern.png");
     opacity: 0.00;
-    pointer-events: none;
-    animation-duration: 2s;
-    animation-name: background-glitch;
-    animation-delay: 10s;
-    animation-fill-mode: forwards; }
+    pointer-events: none; }
+    body .overlay.animated, html .overlay.animated {
+      animation-duration: 3s;
+      animation-name: background-glitch;
+      animation-fill-mode: forwards; }
+  body .info-container, html .info-container {
+    padding: 40px;
+    font-size: 0.8em; }
   body #particles, html #particles {
     width: 120%;
     height: 120%;
@@ -51,7 +59,7 @@ body, html {
     background: #524f41;
     margin: 10px 0 10px 0;
     width: 0;
-    transition: 24s linear; }
+    transition: 2s linear; }
   body .dud, html .dud {
     color: rgba(82, 79, 65, 0.69); }
   body .audio-bars, html .audio-bars {
@@ -68,26 +76,46 @@ body, html {
 
 @keyframes background-glitch {
   0% {
-    opacity: 0.2; }
+    opacity: 0.77; }
+  5% {
+    opacity: 0.05; }
   10% {
-    opacity: 0.5; }
+    opacity: 0.91; }
+  15% {
+    opacity: 0.2; }
   20% {
-    opacity: 0.25; }
-  30% {
-    opacity: 0.7; }
-  40% {
     opacity: 0.1; }
-  50% {
-    opacity: 0.9; }
-  60% {
+  25% {
     opacity: 0.3; }
+  30% {
+    opacity: 0.16; }
+  35% {
+    opacity: 0.65; }
+  40% {
+    opacity: 0.92; }
+  45% {
+    opacity: 0.39; }
+  50% {
+    opacity: 0.25; }
+  55% {
+    opacity: 0.01; }
+  60% {
+    opacity: 0.34; }
+  65% {
+    opacity: 0.67; }
   70% {
-    opacity: 0.7; }
+    opacity: 0.48; }
+  75% {
+    opacity: 0.58; }
   80% {
-    opacity: 0; }
+    opacity: 0.71; }
+  85% {
+    opacity: 0.59; }
   90% {
-    opacity: 0.1; }
+    opacity: 0.62; }
+  95% {
+    opacity: 0.65; }
   100% {
-    opacity: 0.03; } }
+    opacity: 0.02; } }
 
 /*# sourceMappingURL=main.css.map */

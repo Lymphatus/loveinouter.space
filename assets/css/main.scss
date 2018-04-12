@@ -2,13 +2,22 @@ $cream: #fafaef;
 $text-primary: #524f41;
 $text-scramble: rgba(82, 79, 65, 0.69);
 
+@font-face {
+  font-family: Rodin;
+  src: url(../fonts/Rodin_DB.otf);
+}
+
 body, html {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Rodin', monospace;
   background: $cream;
   color: $text-primary;
 
   width: 100%;
   height: 100%;
+
+  .hidden {
+    display: none;
+  }
 
   .container {
     width: 100%;
@@ -22,7 +31,7 @@ body, html {
     padding: 5px;
     width: 100%;
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.7em;
 
     .credits {
       padding-right: 10px;
@@ -38,7 +47,7 @@ body, html {
   .init-text {
     font-family: inherit;
     color: inherit;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     animation-duration: 2s;
   }
@@ -53,11 +62,18 @@ body, html {
     background-image: url('../images/pattern.png');
     opacity: 0.00;
     pointer-events: none;
-    animation-duration: 2s;
-    animation-name: background-glitch;
-    animation-delay: 10s;
-    animation-fill-mode: forwards;
+    &.animated {
+      animation-duration: 3s;
+      animation-name: background-glitch;
+      animation-fill-mode: forwards;
+    }
   }
+
+  .info-container {
+    padding: 40px;
+    font-size: 0.8em;
+  }
+
   #particles {
     width: 120%;
     height: 120%;
@@ -71,7 +87,7 @@ body, html {
     background: $text-primary;
     margin: 10px 0 10px 0;
     width: 0;
-    transition: 24s linear;
+    transition: 2s linear;
   }
   .dud {
     color: $text-scramble;
@@ -93,17 +109,27 @@ body, html {
 }
 
 @keyframes background-glitch {
-  0%   {opacity: 0.2;}
-  10%  {opacity: 0.5;}
-  20%  {opacity: 0.25;}
-  30%  {opacity: 0.7;}
-  40%  {opacity: 0.1;}
-  50%  {opacity: 0.9;}
-  60%  {opacity: 0.3;}
-  70%  {opacity: 0.7;}
-  80%  {opacity: 0;}
-  90%  {opacity: 0.1;}
-  100% {opacity: 0.03;}
+  0%   {opacity: random(100) / 100;}
+  5%  {opacity: random(100) / 100;}
+  10%  {opacity: random(100) / 100;}
+  15%  {opacity: random(100) / 100;}
+  20%  {opacity: random(100) / 100;}
+  25%  {opacity: random(100) / 100;}
+  30%  {opacity: random(100) / 100;}
+  35%  {opacity: random(100) / 100;}
+  40%  {opacity: random(100) / 100;}
+  45%  {opacity: random(100) / 100;}
+  50%  {opacity: random(100) / 100;}
+  55%  {opacity: random(100) / 100;}
+  60%  {opacity: random(100) / 100;}
+  65%  {opacity: random(100) / 100;}
+  70%  {opacity: random(100) / 100;}
+  75%  {opacity: random(100) / 100;}
+  80%  {opacity: random(100) / 100;}
+  85%  {opacity: random(100) / 100;}
+  90%  {opacity: random(100) / 100;}
+  95%  {opacity: random(100) / 100;}
+  100% {opacity: 0.02;}
 }
 
 

@@ -73,7 +73,7 @@ var TextScramble = function () {
                     complete++;
                     output += to;
                 } else if (this.frame >= start) {
-                    if (!char || Math.random() < 0.5) {
+                    if (!char || Math.random() < 0.1) {
                         char = this.randomChar();
                         this.queue[i].char = char;
                     }
